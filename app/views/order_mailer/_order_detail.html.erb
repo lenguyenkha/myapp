@@ -1,0 +1,7 @@
+<tr>
+  <td><%= order_detail.product_name %></td>
+  <td><%= t("order_details.order_detail.price", price: order_detail.product_price) %></td>
+  <td><%= order_detail.quantity %></td>
+  <td><%= t("order_details.order_detail.price",
+    price: calc_price(order_detail.product_price, order_detail.quantity)) %></td>
+</tr>

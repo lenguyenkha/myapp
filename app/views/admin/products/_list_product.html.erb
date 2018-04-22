@@ -1,0 +1,28 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <%= t ".list_product" %>
+  </div>
+  <div class="panel-body">
+    <div class="wishlist-item table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th><%= t "admin.products.index.id" %></th>
+            <th class="th-product"><%= t "admin.products.index.pricure" %></th>
+            <th><%= t "admin.products.index.name" %></th>
+            <th><%= t "admin.products.index.quantity" %></th>
+            <th><%= t "admin.products.index.price" %></th>
+            <th><%= t "admin.products.index.category_name" %></th>
+            <th><%= t "admin.products.index.created_at" %></th>
+            <th><%= t "admin.products.index.updated_at" %></th>
+            <th><%= t "admin.products.index.function" %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <%= render partial: "product", collection: @products %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<%= will_paginate @products %>

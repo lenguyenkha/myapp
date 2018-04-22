@@ -1,0 +1,14 @@
+<div id="list-product">
+  <div class="product-grid-area">
+    <ul class="products-grid">
+      <% if @products && @products.any? %>
+        <%= render @products %>
+      <% elsif %>
+        <%= t "products.not_found_product" %>
+      <% end %>
+    </ul>
+  </div>
+  <div class="pagination-area">
+    <%= will_paginate @products, previous_label: "<", next_label: ">" %>
+  </div>
+</div>

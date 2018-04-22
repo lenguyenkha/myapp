@@ -1,0 +1,139 @@
+<header>
+  <div class="header-container">
+    <div class="header-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-sm-4 col-md-5 hidden-xs">
+            <div class="welcome-msg "><%= t ".wellcome_msg" %></div>
+            <span class="phone hidden-sm"><%= t ".call_us" %></span>
+          </div>
+          <div class="headerlinkmenu col-lg-8 col-md-7 col-sm-8 col-xs-12">
+            <div class="links">
+              <% if logged_in? %>
+
+              <% else %>
+                <div>
+                  <%= link_to login_path do %>
+                    <i class="fa fa-sign-in"></i>
+                    <span class="hidden-xs"><%= t ".sign_in" %></span>
+                  <% end  %>
+                  <%= link_to signup_path do %>
+                      <i class="fa fa-user-plus"></i>
+                      <span class="hidden-xs"><%= t ".sign_up" %></span>
+                    <% end %>
+                </div>
+              <% end %>
+            </div>
+            <div class="language-currency-wrapper">
+              <div class="inner-cl">
+                <% if logged_in? %>
+                  <div class="block block-language form-language">
+                    <div class="lg-cur">
+                      <span>
+                        <i class="fa fa-user"></i>
+                        <i class="fa fa-angle-down"></i>
+                      </span>
+                    </div>
+                    <ul>
+                      <% if @current_user.is_admin? %>
+                        <li class="login">
+                          <%= link_to admin_root_path do %>
+                            <i class="fa fa-tachometer"></i>
+                            <%= t ".dashboard_admin" %>
+                          <% end  %>
+                        </li>
+                      <% end %>
+                      <li class="login">
+                        <%= link_to orders_path do %>
+                          <i class="fa fa-history"></i>
+                          <%= t ".history_order" %>
+                        <% end  %>
+                      </li>
+                      <li class="login">
+                        <%= link_to @current_user do %>
+                          <i class="fa fa-cog"></i>
+                          <%= t ".profile" %>
+                        <% end  %>
+                      </li>
+                      <li class="divider"></li>
+                      <li class="login">
+                        <%= link_to logout_path, method: :delete do %>
+                          <i class="fa fa-sign-out"></i>
+                          <%= t ".log_out" %>
+                        <% end  %>
+                      </li>
+                    </ul>
+                  </div>
+                <% end %>
+                <div class="block block-currency">
+                  <div class="lg-cur">
+                    <span>
+                      <%= image_tag Settings.languages[:"#{I18n.locale}_image"], alt: t("languages.#{I18n.locale}") %>
+                      <span class="lg-fr"><%= t "languages.#{I18n.locale}" %></span>
+                      <i class="fa fa-angle-down"></i>
+                    </span>
+                  </div>
+                  <ul>
+                    <li>
+                      <%= link_to languages_path(locale: :vi) do %>
+                        <%= image_tag  "vietnam.png", alt: t("languages.vi"), class: "flag-image" %> <span><%= t "languages.vi" %></span>
+                      <% end %>
+                    </li>
+                    <li>
+                      <%= link_to languages_path(locale: :en) do %>
+                        <%= image_tag  "english.png", alt: t("languages.vi"), class: "flag-image" %> <span><%= t "languages.en" %></span>
+                      <% end %>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3 col-md-3 col-xs-12">
+          <div class="logo">
+            <%= link_to root_path, title: t(".logo") do %>
+              <%= image_tag("logo.png", atl: t(".logo"))%>
+            <% end %>
+          </div>
+        </div>
+        <div class="col-xs-9 col-sm-6 col-md-7">
+
+          <div class="top-search">
+            <div id="search">
+              <%= form_tag search_path, method: :get do %>
+                <div class="input-group">
+                  <%= text_field_tag :name, nil, class: "form-control", placeholder: t(".search_place_holder") %>
+                  <%= button_tag type: "submit", class: "btn-search", name: nil do %>
+                    <%= content_tag :i, "", class: "fa fa-search" %>
+                  <% end %>
+                </div>
+              <% end %>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-lg-2 col-xs-3 top-cart">
+          <div class="top-cart-contain">
+            <div class="mini-cart">
+              <div class="basket dropdown-toggle">
+                <%= link_to cart_path do %>
+                  <div class="cart-icon"><i class="fa fa-shopping-cart"></i></div>
+                  <div class="shoppingcart-inner hidden-xs">
+                    <span class="cart-title"><%= t ".cart" %></span>
+                    <span class="cart-total"><%= t ".items", item: current_order.size %></span>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

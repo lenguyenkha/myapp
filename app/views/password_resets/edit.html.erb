@@ -1,0 +1,21 @@
+<% provide :title, t(".tittle") %>
+<section class="main-container col1-layout">
+  <div class="main container">
+    <div class="page-content">
+      <div class="account-login">
+        <div class="box-authentication">
+          <h4><%= t ".tittle" %></h4>
+          <%= form_for @user, url: password_reset_path(params[:id]) do |f| %>
+            <%= render "shared/error_messages", object: f.object %>
+            <%= hidden_field_tag :email, @user.email %>
+            <%= f.label :password %>
+            <%= f.password_field :password, class: "form-control", required: true %>
+            <%= f.label :password_confirmation, t(".confirm") %>
+            <%= f.password_field :password_confirmation, class: "form-control", required: true %>
+            <%= f.submit t(".update"), class: "button" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

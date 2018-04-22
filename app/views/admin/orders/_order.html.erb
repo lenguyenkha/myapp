@@ -1,0 +1,30 @@
+<tr>
+  <td><%= order.rank.to_i %></td>
+  <td><%= order.user_email %></td>
+  <td><%= order.user_name %></td>
+  <td><%= order.total %></td>
+  <td>
+    <span class="label label-<%= order.status %>">
+      <%= order.status %>
+    </span>
+  </td>
+  <td><%= l order.created_at %></td>
+  <td><%= l order.updated_at %></td>
+  <td>
+    <%= link_to admin_order_order_details_path(order_id: order.id), title: t(".detail") do %>
+      <i class="fa fa-info"></i>
+    <% end %>
+    <% if order.pending? %>
+      |
+      <%= link_to admin_order_path(id: order.id, status: 1),
+        method: :patch, title: t(".accept") do %>
+        <i class="fa fa-check"></i>
+      <% end %>
+      |
+      <%= link_to admin_order_path(id: order.id, status: 2),
+        method: :patch, title: t(".reject") do %>
+        <i class="fa fa-ban"></i>
+      <% end %>
+    <% end %>
+  </td>
+</tr>

@@ -1,0 +1,47 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+.error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 20px 30px;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
+}
+.page-wrapper{
+  min-height: 912px;
+}
+.login a span {
+  color: black !important;
+}
+.comment-list .function{
+  float: right;
+}
+.wishlist-item table .td-remove-order > a {
+  background: #b92727;
+  color: #fff;
+  display: inline-block;
+  font-weight: 700;
+  padding: 8px 14px;
+  text-transform: uppercase;
+  width: 115px;
+}
+
+.flag-image {
+  width: 25px;
+  height: 15px;
+}
+
+@media (max-width: 767px) {
+  .header-top {
+    height: 40px;
+  }
+}

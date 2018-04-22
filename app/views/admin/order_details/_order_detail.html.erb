@@ -1,0 +1,8 @@
+<tr>
+  <td><%= order_detail.rank.to_i %></td>
+  <td class="th-product"><%= image_tag order_detail.product_picture.url %></td>
+  <td><%= order_detail.product_name %></td>
+  <td><%= order_detail.quantity %></td>
+  <td><%= order_detail.product_price %></td>
+  <td><%= calc_price order_detail.product_price, order_detail.quantity %></td>
+</tr>

@@ -1,0 +1,28 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require "custom.scss"
+ *= require "stylesheets/animate.css"
+ *= require "stylesheets/blog.css"
+ *= require "stylesheets/flexslider.css"
+ *= require "stylesheets/jquery-ui.css"
+ *= require "stylesheets/owl.carousel.css"
+ *= require "stylesheets/owl.theme.css"
+ *= require "stylesheets/owl.transitions.css"
+ *= require "stylesheets/quick_view_popup.css"
+ *= require "stylesheets/revolution-slider.css"
+ *= require "stylesheets/simple-line-icons.css"
+ *= require "stylesheets/style.css"
+ *= require status.scss
+ *= require rating.scss
+ */

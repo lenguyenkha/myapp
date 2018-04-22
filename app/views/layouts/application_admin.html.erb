@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= full_title(yield :title) %></title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag "admin/admin", media: "all", "data-turbolinks-track": "reload" %>
+    <%= javascript_include_tag "admin/admin", "data-turbolinks-track": "reload" %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= render "layouts/shim" %>
+  </head>
+  <body>
+    <% flash.each do |message_type, message| %>
+      <div id="quick_view_popup-overlay" class="quick_view_popup-overlay"></div>
+      <div id="quick_view_popup-wrap" class="quick_view_popup-wrap">
+        <div class="modal-dialog">
+          <div class="modal-content alert alert-<%= message_type %>">
+            <div class="modal-header">
+              <h4 class="modal-title"><%= t("notice_message_#{message_type}").capitalize %></h4>
+            </div>
+            <div class="modal-body">
+              <p><%= message %></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default"
+                data-dismiss="modal" onclick="close_popup()"><%= t "close_popup" %></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+    <div id="wrapper">
+      <%= render "admin/layouts/navbar" %>
+      <%= yield %>
+    </div>
+  </body>
+</html>

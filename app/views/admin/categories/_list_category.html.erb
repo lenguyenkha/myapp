@@ -1,0 +1,25 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <%= t ".list_category" %>
+  </div>
+  <div class="panel-body">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th><%= t "admin.categories.index.id" %></th>
+            <th><%= t "admin.categories.index.name" %></th>
+            <th><%= t "admin.categories.index.parent_id" %></th>
+            <th><%= t "admin.categories.index.created_at" %></th>
+            <th><%= t "admin.categories.index.updated_at" %></th>
+            <th><%= t "admin.categories.index.function" %></th>
+          </tr>
+        </thead>
+        <tbody id="list-category">
+          <%= render partial: "category", collection: @categories %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<%= will_paginate @categories %>

@@ -1,0 +1,29 @@
+en:
+  products:
+    had_been_rating: "You have rated this product"
+    price_label: "Price"
+    price: "$ %{price}"
+    add_to_cart: "Add to Cart"
+    no_image: "No image"
+    not_found_product: "Not found product"
+    show:
+      count_comment: "%{count} Commtent(s)"
+      available: "Availability: "
+      in_stock: "In Stock"
+      out_of_stock: "Out of stock"
+      quantity: "Quantity:"
+      description: "Description"
+      comment_review: "Comment and Rating"
+      comments: "Comments"
+      no_comment: "No comment"
+    rating_form:
+      rate_question: "How do you rate this product?"
+      rating_label: "Rate"
+      stars: "%{number} stars"
+      invalid_rate: "Invalid rating value"
+    comment_form:
+      comment_form_h2: "Write Your Own Review"
+      comment_label: "Comment"
+      button_submit: "Comment"
+    comment:
+      comment_list_title: "Comment"

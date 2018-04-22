@@ -1,0 +1,8 @@
+<%= form_tag import_admin_products_path, multipart: true do %>
+  <div class="form-group">
+    <%= label :file, t(".file") %>
+    <%= file_field_tag :file, accept: ".csv,.xls,.xlsx", class: "form-control",
+      required: true %>
+  </div>
+  <%= submit_tag t(".button_submit"), class: "btn btn-primary" %>
+<% end %>

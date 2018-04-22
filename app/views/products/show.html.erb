@@ -1,0 +1,99 @@
+<% provide :title, @product.name %>
+<div class="main-container col1-layout">
+  <div class="container">
+    <div class="row">
+      <div class="col-main">
+        <div class="product-view-area">
+          <div class="product-big-image col-xs-12 col-sm-5 col-lg-5 col-md-5">
+            <div class="large-image">
+              <%= image_tag @product.picture.url, class: "first-img", alt: @product.name %>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-7 col-lg-7 col-md-7 product-details-area">
+            <div class="product-name">
+              <h1><%= @product.name %></h1>
+            </div>
+            <div class="price-box">
+              <p class="special-price">
+                <span class="price-label"><%= t "products.price_label" %></span
+                <span class="price"><%= t "products.price", price: @product.price %></span>
+              </p>
+            </div>
+            <div class="ratings">
+              <div class="rating">
+                <%= product_rating @product %>
+              </div>
+              <% in_stock = @product.quantity > Settings.products.out_of_stock %>
+              <p class="rating-links"><%= t ".count_comment", count: @product.comments.size %></p>
+              <p class="availability pull-right <%= in_stock ? "in-stock " : "out-of-stock" %>">
+                <%= t ".available" %>
+                <span>
+                  <%= in_stock ? t(".in_stock") : t(".out_of_stock") %>
+                </span>
+              </p>
+              <% unless @product.quantity.zero? %>
+                <div class="product-variation">
+                  <%= form_tag cart_path(product_id: @product.id), method: :post do %>
+                    <div class="cart-plus-minus">
+                      <label for="qty"><%= t(".quantity") %></label>
+                      <div class="numbers-row">
+                        <div onClick="dec_quantity()" class="dec qtybutton">
+                          <i class="fa fa-minus">&nbsp;</i>
+                        </div>
+                        <%= number_field_tag :quantity, nil, class: "qty",
+                          value: Settings.products.min_quantity, min: Settings.products.min_quantity,
+                          max: @product.quantity, required: true %>
+                        <div onClick="inc_quantity(<%= @product.quantity %>)" class="inc qtybutton">
+                          <i class="fa fa-plus">&nbsp;</i>
+                        </div>
+                      </div>
+                    </div>
+                    <%= button_tag type: "submit", class: "button pro-add-to-cart",
+                    title: t("products.add_to_cart"), name: nil do %>
+                      <span><i class="fa fa-shopping-cart"></i><%= t("products.add_to_cart") %></span>
+                    <% end %>
+                  <% end %>
+                </div>
+              <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="product-overview-tab">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="product-tab-inner">
+                <ul id="product-detail-tab" class="nav nav-tabs product-tabs">
+                  <li class="<%= active_tab :description, "active" %>">
+                    <a href="#description" data-toggle="tab"><%= t ".description" %></a>
+                  </li>
+                  <li class="<%= active_tab :comment, "active" %>">
+                    <a href="#reviews" data-toggle="tab"><%= t ".comment_review" %></a>
+                  </li>
+                </ul>
+                <div id="productTabContent" class="tab-content">
+                  <div class="tab-pane fade <%= active_tab :description, "in active" %>" id="description">
+                    <div class="std">
+                      <p><%= @product.detail %></p>
+                    </div>
+                  </div>
+                  <div id="reviews" class="tab-pane fade <%= active_tab :comment, "in active" %>">
+                    <div class="col-sm-7 col-lg-7 col-md-7" id="list-comment">
+                      <%= render "comment" %>
+                    </div>
+                    <div class="col-sm-5 col-lg-5 col-md-5">
+                      <div class="reviews-content-right">
+                        <%= render "rating_form" %>
+                        <%= render "comment_form" %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

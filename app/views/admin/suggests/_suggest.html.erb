@@ -1,0 +1,30 @@
+<tr>
+  <td><%= suggest.id %></td>
+  <td><%= suggest.user_email %></td>
+  <td><%= suggest.product_name %></td>
+  <td><%= suggest.category_name %></td>
+  <td><%= suggest.detail %></td>
+  <td>
+    <span class="label label-<%= suggest.status %>">
+      <%= suggest.status %>
+    </span>
+  </td>
+  <td>
+    <%= link_to admin_suggest_path(suggest), method: :delete,
+      data: {confirm: t("admin.suggests.destroy.confirm")} do %>
+      <i class="fa fa-trash-o"></i>
+    <% end %>
+    <% if suggest.pending? %>
+      |
+      <%= link_to admin_suggest_path(id: suggest.id, status: Settings.suggests.accept_status),
+        method: :patch do %>
+        <i class="fa fa-check"></i>
+      <% end %>
+      |
+      <%= link_to admin_suggest_path(id: suggest.id, status: Settings.suggests.reject_status),
+        method: :patch do %>
+        <i class="fa fa-times"></i>
+      <% end %>
+    <% end %>
+  </td>
+</tr>

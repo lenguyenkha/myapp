@@ -1,0 +1,38 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <%= t ".list_user" %>
+    <div class="input-group custom-search-form isearch">
+      <%= form_tag admin_users_path, remote: true, method: :get do %>
+        <%= text_field_tag :search, params[:search], class: "form-control sinput",
+          placeholder: t("admin.users.index.name_email") %>
+        <span class="input-group-btn ssearch">
+          <%= button_tag type: "submit", class: "btn btn-default", name: nil do %>
+            <%= content_tag :i, "", class: "fa fa-search" %>
+          <% end %>
+        </span>
+      <% end %>
+    </div>
+  </div>
+  <div class="panel-body">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th><%= t "admin.users.index.id" %></th>
+            <th><%= t "admin.users.index.name" %></th>
+            <th><%= t "admin.users.index.gender" %></th>
+            <th><%= t "admin.users.index.address" %></th>
+            <th><%= t "admin.users.index.phone" %></th>
+            <th><%= t "admin.users.index.email" %></th>
+            <th><%= t "admin.users.index.actived" %></th>
+            <th><%= t "admin.users.index.function" %></th>
+          </tr>
+        </thead>
+        <tbody id="list-category">
+          <%= render partial: "user", collection: @users %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<%= will_paginate @users %>

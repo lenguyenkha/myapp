@@ -1,0 +1,30 @@
+en:
+  users:
+    anonymous: "Anonymous"
+    please_log_in: "Please log in."
+    create:
+      success_signup: "Welcome to Foods and Drinks!"
+      failed_signup: "Sign up failed "
+      check_ymail: "Please check your email to activate your account."
+    show:
+      your_profile: "My Profile"
+      update: "(Update Profile)"
+      male: "Male"
+      female: "Female"
+      gmale: "None"
+    new:
+      signup: "Sign up"
+      create_account: "Create your very own account"
+      signup_able: "Sign up today and you will be able to :"
+      li_speed: "Speed your way through checkout"
+      li_track: "Track your orders easily"
+      li_keep: "Keep a record of all your purchases"
+    up_edit:
+      submit: "Create my account"
+      confirm: "Password confirmation"
+    edit:
+      update: "Update My Profile"
+      edit_user: "Edit user"
+      please_login: "Please log in."
+    update:
+      profile_updated: "Profile updated"

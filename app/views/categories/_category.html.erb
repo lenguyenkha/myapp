@@ -1,0 +1,9 @@
+<li>
+  <label>
+    <%= link_to filter_params.merge(category_id: category.id),
+      method: :get do %>
+      <span><%= category.name.html_safe %></span>
+      <span class="count"><%= category.products.size %></span>
+    <% end %>
+  </label>
+</li>

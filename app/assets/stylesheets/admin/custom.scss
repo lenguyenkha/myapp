@@ -1,0 +1,43 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+.error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 20px 30px;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
+}
+.quick_view_popup-wrap{
+  display: block;
+}
+.wishlist-item table .th-product {
+  width: 18%;
+}
+.wishlist-item table .th-product img {
+  width: 100px;
+}
+.isearch{
+  float: right;
+  margin-right: 8%;
+  margin-top: -7px;
+}
+.sinput{
+  border-radius: 5px !important;
+}
+.ssearch{
+  float: right;
+  margin-top: -34px;
+}
+.orders_chart{
+  width: 700px;
+  height: 350px;
+}

@@ -1,0 +1,15 @@
+<tr>
+  <td><%= user.id %></td>
+  <td><%= user.name %></td>
+  <%= gender user %>
+  <td><%= user.address %></td>
+  <td><%= user.phone %></td>
+  <td><%= user.email %></td>
+  <%= activated user %>
+  <td>
+    <%= link_to admin_user_path(user), method: :delete,
+      data: {confirm: t("admin.users.destroy.confirm")} do %>
+      <i class="fa fa-trash-o"></i>
+    <% end unless user.is_admin?%>
+  </td>
+</tr>

@@ -1,0 +1,25 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <%= t ".list_order_detail" %>
+  </div>
+  <div class="panel-body">
+    <div class="wishlist-item table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th><%= t "admin.order_details.index.no_order" %></th>
+            <th class="th-product"><%= t "admin.order_details.index.picture" %></th>
+            <th><%= t "admin.order_details.index.name" %></th>
+            <th><%= t "admin.order_details.index.unit_price" %></th>
+            <th><%= t "admin.order_details.index.quantity" %></th>
+            <th><%= t "admin.order_details.index.total" %></th>
+          </tr>
+        </thead>
+        <tbody id="list-order-detail">
+          <%= render partial: "order_detail", collection: @order_details %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<%= will_paginate @order_details %>

@@ -1,0 +1,29 @@
+vi:
+  products:
+    had_been_rating: "Bạn đã đánh giá sản phẩm này rồi"
+    price_label: "Giá"
+    price: "$ %{price}"
+    add_to_cart: "Thêm vào giỏ hàng"
+    no_image: "Không có hình"
+    not_found_product: "Không tìm thấy sản phẩm"
+    show:
+      count_comment: "%{count} Bình luận"
+      available: "Trạng thái: "
+      in_stock: "Còn hàng"
+      out_of_stock: "Hết hàng"
+      quantity: "Số lượng:"
+      description: "Mô tả"
+      comment_review: "Bình luận và đánh giá"
+      comments: "Các bình luận"
+      no_comment: "Không có bình luận"
+    rating_form:
+      rate_question: "Bạn đánh giá bao nhiêu cho sản phẩm này?"
+      rating_label: "Đánh giá"
+      stars: "%{number} sao"
+      invalid_rate: "Đánh giá không hợp lệ"
+    comment_form:
+      comment_form_h2: "Viết bình luận của bạn"
+      comment_label: "Bình luận"
+      button_submit: "Bình luận"
+    comment:
+      comment_list_title: "Bình luận"

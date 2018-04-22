@@ -1,0 +1,38 @@
+.label {
+  font-weight: normal;
+  font-size: 90%;
+  margin-left: 5px;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+}
+
+.label-pending {
+  background-color: #b9ae29;
+}
+
+.label-pending[href]:hover,
+.label-pending[href]:focus {
+  background-color: #b9ae29;
+}
+
+.label-accept {
+  background-color: #2980b9;
+}
+
+.label-accept[href]:hover,
+.label-accept[href]:focus {
+  background-color: #2980b9;
+}
+
+.label-reject {
+  background-color: #b92727;
+}
+
+.label-reject[href]:hover,
+.label-reject[href]:focus {
+  background-color: #b92727;
+}

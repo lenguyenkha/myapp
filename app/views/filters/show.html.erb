@@ -1,0 +1,76 @@
+<% provide :title, t("filters.search_title") %>
+<div class="main-container col2-left-layout">
+  <div class="container">
+    <div class="align-items-center">
+      <%= render_alphabet %>
+    </div>
+    <div class="row">
+      <div class="col-main col-sm-9 col-xs-12 col-sm-push-3">
+        <div class="shop-inner">
+          <div class="page-title">
+            <h2 id="search-title"><%= t ".products" %></h2>
+          </div>
+          <%= render "list_product" %>
+        </div>
+      </div>
+      <aside class="sidebar col-sm-3 col-xs-12 col-sm-pull-9">
+        <div class="block shop-by-side">
+          <div class="sidebar-bar-title">
+            <h3><%= t ".shop_by" %></h3>
+          </div>
+          <div class="block-content">
+            <div class="layered-Category">
+              <h2 class="saider-bar-title"><%= link_to t(".all_product"), search_path %></h2>
+              <h2 class="saider-bar-title"><%= t ".categories" %></h2>
+              <div class="layered-content">
+                <ul class="check-box-list">
+                  <% @root_categories.each do |category| %>
+                      <%= render category %>
+                      <% category.all_children.each do |child| %>
+                        <%= render child %>
+                      <% end %>
+                  <% end %>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="block product-price-range ">
+          <div class="sidebar-bar-title">
+            <h3><%= t ".price" %></h3>
+          </div>
+          <div class="block-content">
+            <div class="slider-range">
+              <div class="check-box-list">
+                <%= form_tag filter_params.merge(min_price: :min_price, max_price: :max_price), method: :get do %>
+                  <div class="cart-plus-minus">
+                    <div class="numbers-row">
+                  <%= number_field_tag :min_price, nil, class: "input-sm col-sm-6", placeholder: t(".min_price") %>
+                  <%= number_field_tag :max_price, nil, class: "input-sm col-sm-6", placeholder: t(".max_price") %>
+                    </div>
+                  </div>
+                  <hr>
+                  <%= button_tag type: "submit", class: "button pro-add-to-cart", name: nil do %>
+                    <%= content_tag :span, t(".search") %>
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="block product-price-range ">
+          <div class="sidebar-bar-title">
+            <h3><%= t ".rating" %></h3>
+          </div>
+          <div class="block-content">
+            <div class="slider-range">
+              <ul class="check-box-list">
+                <%= render_rating_search %>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>

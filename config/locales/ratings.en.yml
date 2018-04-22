@@ -1,0 +1,7 @@
+en:
+  ratings:
+    5stars: "Excellent!"
+    4stars: "Good!"
+    3stars: "Average!"
+    2stars: "Poor!"
+    1star: "Very poor!"

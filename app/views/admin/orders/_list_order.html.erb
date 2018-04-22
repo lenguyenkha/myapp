@@ -1,0 +1,27 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <%= t ".list_order" %>
+  </div>
+  <div class="panel-body">
+    <div class="wishlist-item table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th><%= t "admin.orders.index.rank" %></th>
+            <th><%= t "admin.orders.index.user_email" %></th>
+            <th><%= t "admin.orders.index.user_name" %></th>
+            <th><%= t "admin.orders.index.total" %></th>
+            <th><%= t "admin.orders.index.status" %></th>
+            <th><%= t "admin.orders.index.created_at" %></th>
+            <th><%= t "admin.orders.index.updated_at" %></th>
+            <th><%= t "admin.orders.index.function" %></th>
+          </tr>
+        </thead>
+        <tbody id="list-order">
+          <%= render partial: "order", collection: @orders %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<%= will_paginate @orders %>

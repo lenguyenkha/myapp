@@ -1,0 +1,26 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <%= t ".list_suggest" %>
+  </div>
+  <div class="panel-body">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th><%= t "admin.suggests.index.id" %></th>
+            <th><%= t "admin.suggests.index.email" %></th>
+            <th><%= t "admin.suggests.index.product_name" %></th>
+            <th><%= t "admin.suggests.index.category" %></th>
+            <th><%= t "admin.suggests.index.detail" %></th>
+            <th><%= t "admin.suggests.index.status" %></th>
+            <th><%= t "admin.suggests.index.function" %></th>
+          </tr>
+        </thead>
+        <tbody id="list-suggest">
+          <%= render partial: "suggest", collection: @suggests %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<%= will_paginate @suggests %>

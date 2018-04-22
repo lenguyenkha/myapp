@@ -1,0 +1,9 @@
+<% if @drink_product && @drink_product.any? %>
+  <%= render @drink_product %>
+<% else %>
+  <p><%= t "static_pages.no_item" %></p>
+<% end %>
+<div class="pagination-area">
+  <%= will_paginate @drink_product, param_name: "page_drink",
+    previous_label: "<", next_label: ">" if @drink_product %>
+</div>

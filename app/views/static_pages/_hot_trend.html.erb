@@ -1,0 +1,9 @@
+<% if @hot_trend  && @hot_trend.any? %>
+  <%= render @hot_trend %>
+<% else %>
+  <p><%= t "static_pages.no_item" %></p>
+<% end %>
+<div class="pagination-area">
+  <%= will_paginate @hot_trend, param_name: "page_hot_trend",
+    previous_label: "<", next_label: ">" if @hot_trend %>
+</div>

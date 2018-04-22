@@ -1,0 +1,12 @@
+<tr>
+  <td class="th-product">
+    <%= link_to order_detail.product do %>
+      <%= image_tag order_detail.product_picture.url, alt: order_detail.product.name %>
+    <% end %>
+  </td>
+  <td class="th-details"><h2><%= link_to order_detail.product_name, order_detail.product %></td>
+  <td class="th-price"><%= t ".price", price: order_detail.product_price %></td>
+  <td class="th-quantity"><%= order_detail.quantity %></td>
+  <td class="th-price"><%= t ".price",
+    price: calc_price(order_detail.product_price, order_detail.quantity) %></td>
+</tr>

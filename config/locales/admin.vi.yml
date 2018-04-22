@@ -1,0 +1,189 @@
+vi:
+  admin:
+    layouts:
+      dashboard: "Bảng điều khiển"
+      manage_users: "Quản lý người dùng"
+      manage_categories: "Quản lý danh mục"
+      manage_products: "Quản lý sản phẩm"
+      manage_orders: "Quản lý đơn hàng"
+      manage_suggests: "Quản lý đề xuất"
+      manage_order_details: "Quản lý chi tiết đơn hàng"
+      navbar:
+        admin_header: "Trang quản lý"
+        toggle_navigation: "Thanh điều hướng"
+        back_to_public_page: "Trở về trang chủ người dùng"
+        logout: "Đăng xuất"
+        import_products: "Nhập sản phẩm"
+        statistic_orders: "Thống kê đơn hàng"
+        setting: "Cài đặt"
+    static_pages:
+      index:
+        dashboard_admin_title: "Bảng điều khiển"
+        goto: "Đi đến"
+        manage_users: "Quản lý user"
+        manage_products: "Quản lý sản phẩm"
+        manage_orders: "Quản lý đơn hàng"
+    categories:
+      root_category: "Danh mục gốc mới"
+      not_valid_parent: "Danh mục cha không đúng"
+      not_found_category: "Không tìm thấy danh mục"
+      can_not_delete: "Không thể xóa danh mục gốc"
+      index:
+        id: "id"
+        name: "Tên"
+        parent_id: "Danh mục cha"
+        created_at: "Tạo ngày"
+        updated_at: "Cập nhật ngày"
+        function: "Chức năng"
+        manage_categories_title: "Quản lý danh mục"
+        list_category: "Danh sách danh mục"
+        add_new: "Thêm mới"
+      destroy:
+        delete_success: "Xóa thành công"
+        delete_failed: "Đã có lỗi xảy ra, xóa không thành công"
+        confirm: "Bạn có chắc?"
+      edit:
+        update_category_title: "Cập nhậpt danh mục"
+      update:
+        update_success: "Cập nhật thành công"
+        update_failed: "Đã có lỗi xảy ra, cập nhật không thành công"
+      new:
+        new_category_title: "Danh mục mới"
+      create:
+        add_success: "Thêm thành công"
+        add_failed: "Đã có lỗi xảy ra, thêm không thành công"
+      category_form:
+        name_place_holder: "Nhập tên danh mục"
+        parent: "Danh mục Cha"
+        button_submit: "Lưu"
+    products:
+      image_oversize: "phải nhỏ hơn 5MB"
+      not_found_product: "không tìm thấy sản phẩm"
+      index:
+        id: "id"
+        picture: "Hình ảnh"
+        name: "Tên"
+        quantity: "Số lượng"
+        price: "Giá"
+        category_name: "Danh mục"
+        created_at: "Tạo ngày"
+        updated_at: "Cập nhật ngày"
+        function: "Chức năng"
+        manage_products_title: "Quản lý sản phẩm"
+        list_product: "Danh sách sản phẩm"
+        add_new: "Thêm mới"
+      edit:
+        update_product_title: "Cập nhật sản phẩm"
+      update:
+        update_success: "Cập nhật thành công"
+        update_failed: "Đã có lỗi xảy ra, cập nhật không thành công"
+      destroy:
+        delete_success: "Xóa thành công"
+        delete_failed: "Đã có lỗi xảy ra, xóa không thành công"
+        confirm: "Bạn có chắc?"
+      new:
+        new_product_title: "Sản phẩm mới"
+      create:
+        add_success: "Thêm thành công"
+        add_failed: "Đã có lỗi xảy ra, thêm không thành công"
+      product_form:
+        name_place_holder: "Nhập tên sản phẩm"
+        detail_place_holder: "Nhập chi tiết"
+        price_place_holder: "Nhập giá"
+        quantity_place_holder: "Nhập số lượng"
+        category: "Danh mục"
+        button_submit: "Lưu"
+    users:
+      not_found_user: "Không tìm thấy người dùng"
+      index:
+        manage_users_title: "Quản lý người dùng"
+        list_user: "Danh sách người dùng"
+        id: "id"
+        name: "Tên"
+        gender: "Giới tính"
+        address: "Địa chỉ"
+        phone: "Số điện thoại"
+        email: "Email"
+        actived: "Kích hoạt"
+        name_email: "tên, email"
+      destroy:
+        admin: "Không thể xóa admin"
+        delete_success: "Xóa thành công"
+        delete_failed: "Đã có lỗi xảy ra, xóa không thành công"
+        confirm: "Bạn có chắc?"
+      update:
+        update_success: "Cập nhật thành công"
+        update_failed: "Đã có lỗi xảy ra, cập nhật không thành công"
+      gender:
+        male: "Nam"
+        female: "Nữ"
+        none: "không biết"
+    orders:
+      statistic: "Thống kê đơn hàng"
+      load_data: "Xem"
+      not_found_order: "Không tìm thấy đơn hàng"
+      order:
+        detail: "Chi tiết"
+        accept: "Chập nhận"
+        reject: "Từ chối"
+      index:
+        manage_orders_title: "Quản lý đơn hàng"
+        list_order: "Danh sahcs đơn hàng"
+        rank: "STT"
+        user_email: "Email"
+        user_name: "Tên người dùng"
+        total: "Tổng cộng"
+        status: "Trạng thái"
+        created_at: "Tạo ngày"
+        updated_at: "Cập nhật ngày"
+        function: "Chức năng"
+      update:
+        check_status: "Đơn hàng này đã %{status}"
+        update_success: "Cập nhật thành công"
+        update_failed: "Đã có lỗi xảy ra, cập nhật không thành công"
+    order_details:
+      index:
+        manage_order_details_title: "Quản lí chi tiết đơn hàng"
+        list_order_detail: "Danh sách chi tiết đơn hàng"
+        no_order: "STT"
+        picture: "Hình ảnh"
+        name: "Tên sản phẩm"
+        unit_price: "Đơn giá"
+        quantity: "Số lượng"
+        total: "Tổng cộng"
+    order_mailer:
+      admin_respon:
+        greeting: "Xin chào %{name}, "
+        message: "Đơn hàng sô %{order_id} đã được %{status}. Cám ơn bạn!"
+        accept: "Chấp nhận"
+        reject: "Từ chối"
+        pending: "Đang đợi"
+    suggests:
+      not_valid_parent: "Danh mục không hợp lệ"
+      not_found_category: "Không tìm thấy yêu cầu"
+      can_not_delete: "Không thể xóa yêu cầu gốc"
+      index:
+        id: "id"
+        email: "Email"
+        category: "Danh mục"
+        detail: "Chi tiết"
+        status: "Trạng thái"
+        function: "Chức năng"
+        manage_suggests_title: "Quản lý yêu cầu"
+        list_suggest: "Danh sách yêu cầu"
+        add_new: "Thêm mới"
+      destroy:
+        delete_success: "Xóa thành công"
+        delete_failed: "Đã có lỗi xảy ra, xóa không thành công"
+        confirm: "Bạn có chắc?"
+      update:
+        success: "Câp nhập thành công"
+        failed: "Đã có lỗi xảy ra, cập nhật không thành công"
+    import_products:
+      new:
+        import_product_title: "NHập sản phẩm"
+      create:
+        import_failed: "Nhập không thành công"
+      product_import_form:
+        button_submit: "Gửi"
+        file: "File"

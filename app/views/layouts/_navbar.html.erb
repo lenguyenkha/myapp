@@ -1,0 +1,45 @@
+<nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-4">
+        <div class="mm-toggle-wrap">
+          <div class="mm-toggle"> <i class="fa fa-align-justify"></i> </div>
+          <span class="mm-label"><%= t ".menu" %></span> </div>
+        <div class="mega-container visible-lg visible-md visible-sm">
+          <div class="navleft-container">
+            <div class="mega-menu-title">
+              <h3><%= t ".shop_foods_and_drinks" %></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9 col-sm-8">
+        <div class="mtmegamenu">
+          <ul>
+            <li class="mt-root">
+              <div class="mt-root-item">
+                <%= link_to root_path do %>
+                  <div class="title title_font"><span class="title-text"><%= t ".home" %></span></div>
+                <% end %>
+              </div>
+            </li>
+            <li class="mt-root">
+              <div class="mt-root-item">
+                <%= link_to new_suggest_path do %>
+                  <div class="title title_font"><span class="title-text"><%= t ".suggest" %></span></div>
+                <% end %>
+              </div>
+            </li>
+            <li class="mt-root">
+              <div class="mt-root-item">
+                <%= link_to search_path do %>
+                  <div class="title title_font"><span class="title-text"><%= t ".search" %></span></div>
+                <% end %>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

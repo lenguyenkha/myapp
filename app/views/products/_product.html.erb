@@ -1,0 +1,41 @@
+<li class="item col-lg-3 col-md-4 col-sm-6 col-xs-6 ">
+  <div class="product-item">
+    <div class="item-inner">
+      <div class="product-thumbnail">
+        <div class="pr-img-area">
+          <figure>
+             <%= link_to product, class: "product-image", title: product.name do %>
+                <%= image_tag product.picture.url, class: "first-img", alt: product.name %>
+            <% end %>
+          </figure>
+          <button type="button" class="add-to-cart-mt">
+            <%= link_to cart_path(product_id: product.id, quantity: Settings.products.min_quantity), method: :post do %>
+              <i class="fa fa-shopping-cart"></i>
+              <span><%= t "products.add_to_cart" %></span>
+            <% end %>
+          </button>
+        </div>
+      </div>
+      <div class="item-info">
+        <div class="info-inner">
+          <div class="item-title">
+            <%= link_to product.name, product, title: product.name %>
+          </div>
+          <div class="item-content">
+            <div class="rating">
+              <%= product_rating product %>
+            </div>
+            <div class="item-price">
+              <div class="price-box">
+                <p class="special-price">
+                  <span class="price-label"><%= t "products.price_label" %></span>
+                  <span class="price"><%= t "products.price", price: product.price %></span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>

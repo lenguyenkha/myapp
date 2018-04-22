@@ -1,0 +1,18 @@
+<tr>
+  <td class="th-product"><%= order.id %></td>
+  <td class="th-details"><%= l order.created_at %></td>
+  <td class="th-price text-right"><%= t ".total_price", price: order.total %></td>
+  <td class="th-details">
+    <span class="label label-<%= order.status %>">
+      <%= order.status %>
+    </span>
+  </td>
+  <th class="td-add-to-cart">
+    <%= link_to t("orders.index.detail"), order_order_details_path(order) %>
+  </th>
+  <th class="td-remove-order">
+    <% if order.pending?%>
+      <%= link_to t("orders.index.delete"), order_path(order), method: :delete %>
+    <% end %>
+  </th>
+</tr>

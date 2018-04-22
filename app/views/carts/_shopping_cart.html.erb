@@ -1,0 +1,41 @@
+<div class="order-detail-content">
+  <div class="table-responsive">
+    <table class="table table-bordered cart_summary">
+      <thead>
+        <tr>
+          <th class="cart_product"><%= t ".product" %></th>
+          <th><%= t ".name" %></th>
+          <th><%= t ".price" %></th>
+          <th><%= t ".quantity" %></th>
+          <th><%= t ".total_label" %></th>
+          <th class="action"><i class="fa fa-trash-o"></i></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% if @order_details.any? %>
+          <%= render partial: "order_cart", collection: @order_details, as: :order_detail %>
+        <% else %>
+          <tr><td colspan="6"><%= t ".no_item" %></td></tr>
+        <% end %>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2" rowspan="2"></td>
+          <td colspan="3"><strong><%= t ".total_label" %></strong></td>
+          <td colspan="2">
+            <strong id="cart-total-price">
+              <%= t ".total", price: total_price(@order_details) %>
+            </strong>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+  <div class="cart_navigation">
+    <% if @order_details.any? %>
+      <%= link_to orders_path, class: "checkout-btn", method: :post do %>
+        <i class="fa fa-check"></i><%= t ".checkout" %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<tr>
+  <td><%= category.id %></td>
+  <td><%= category.name %></td>
+  <td><%= category.parent_id %></td>
+  <td><%= l category.created_at %></td>
+  <td><%= l category.updated_at %></td>
+  <td>
+    <%= link_to admin_category_path(category), method: :delete,
+      data: {confirm: t("admin.categories.destroy.confirm")} do %>
+      <i class="fa fa-trash-o"></i>
+    <% end %>
+    |
+    <%= link_to edit_admin_category_path(category) do %>
+      <i class="fa fa-pencil-square-o"></i>
+    <% end %>
+  </td>
+</tr>

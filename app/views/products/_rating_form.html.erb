@@ -1,0 +1,22 @@
+<h2><%= t ".rate_question" %></h2>
+<%= form_for @rating do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+  <div class="form-area">
+    <div class="rating-product">
+      <%=f.radio_button :rate, 5, id: "star5" %><label for="star5" title="<%= t "ratings.5stars" %>">5 Stars</label>
+      <%=f.radio_button :rate, 4, id: "star4" %> <label for="star4" title="<%= t "ratings.4stars" %>">4 Stars</label>
+      <%=f.radio_button :rate, 3, id: "star3" %> <label for="star3" title="<%= t "ratings.3stars" %>">5 Stars</label>
+      <%=f.radio_button :rate, 2, id: "star2" %> <label for="star2" title="<%= t "ratings.2stars" %>">2 Stars</label>
+      <%=f.radio_button :rate, 1, id: "star1" %> <label for="star1" title="<%= t "ratings.1star" %>">1 Stars</label>
+    </div>
+  </div>
+  <div class="buttons-set">
+    <%= f.button type: "submit", title: t(".rating_label"), class: "button submit", name: nil do %>
+      <%= content_tag :span, "" do %>
+        <%= content_tag :i, "", class: "fa fa-thumbs-up"%>
+        <%= t ".rating_label" %>
+      <% end %>
+    <% end %>
+  </div>
+  <%= hidden_field_tag :product_id, @rating.product_id %>
+<% end %>

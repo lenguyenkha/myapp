@@ -1,0 +1,27 @@
+<% provide :title, t("admin.orders.statistic") %>
+<div id="page-wrapper" class="page-wrapper" >
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header"><%= t "admin.orders.statistic" %></h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <%= t "admin.orders.statistic" %>
+        </div>
+        <div class="panel-body">
+          <%= form_tag admin_statistics_path, method: :get do %>
+            <%= select_month(Date.today) %>
+            <%= select_year(Date.today, start_year: @start_year, end_year: Time.now.year) %>
+            <%= button_tag t("admin.orders.load_data"), type: "submit", class: "btn btn-primary" %>
+          <% end %>
+          <%= hidden_field_tag :chart_data, "", data: {temp: @data} do %>
+          <% end %>
+          <div id="orders_chart" class="orders_chart"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

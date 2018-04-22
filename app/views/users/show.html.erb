@@ -1,0 +1,34 @@
+<% provide(:title, @user.name) %>
+<section class="main-container col1-layout">
+  <div class="main container">
+    <div class="page-content">
+      <div class="account-login">
+        <div class="box-authentication">
+        <div>
+          <h4 class="pinline"><%= t ".my_profile" %></h4>
+          <p class="pinline""><%= link_to t(".update"), edit_user_path(current_user) %></p>
+        </div>
+          <%= form_for @user do |f| %>
+            <%= render "shared/error_messages", object: f.object %>
+            <%= f.label :name %>
+            <%= f.text_field :name, class: "form-control", disabled: true%>
+            <%= f.label :email %>
+            <%= f.email_field :email, class: "form-control", disabled: true %>
+            <%= f.label :phone %>
+            <%= f.text_field :phone, class: "form-control", disabled: true %>
+            <%= f.label :address %>
+            <%= f.text_field :address, class: "form-control", disabled: true %>
+            <%= f.label :gender %>
+            <% if @user.gender == true %>
+              <p class="pinline"><%= t ".male" %></p>
+            <% elsif @user.gender == false %>
+              <p class="pinline"><%= t ".female" %></p>
+            <% elsif %>
+              <p class="pinline"><%= t ".gmale" %></p>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

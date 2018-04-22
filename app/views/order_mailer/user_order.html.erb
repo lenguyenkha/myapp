@@ -1,0 +1,20 @@
+<h1><%= t ".new_order" %></h1>
+<p>
+  <%= @greeting %><%= @message %>
+</p>
+<table>
+  <thead>
+    <th><%= t "order_details.index.product_name_label" %></th>
+    <th><%= t "order_details.index.unit_price_label" %></th>
+    <th><%= t "order_details.index.quantity_label" %></th>
+    <th><%= t "order_details.index.total_label" %></th>
+  </thead>
+  <tbody>
+  <%= render partial: "order_detail", collection: @order_details %>
+  </tbody>
+  <tfoot>
+    <th></th>
+    <th colspan="2"><%= t "order_details.index.total_label" %></th>
+    <th><%= t("orders.order.total_price", price: @order.total) %></th>
+  </tfoot>
+</table>

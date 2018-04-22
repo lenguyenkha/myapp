@@ -1,0 +1,210 @@
+en:
+  base_title: "Foods And Drinks"
+  close_popup: "Close"
+  account_activation: "Account activation"
+  password_reset: "Password reset"
+  error_sign_up: "User not found"
+  notice_message_success: "Success!!!"
+  notice_message_danger: "Danger!!!"
+  date:
+    formats:
+      default: "%Y-%m-%a %H:%M:%S"
+  time:
+    formats:
+      default: "%Y-%m-%d %H:%M:%S"
+      long: "%Y-%m-%d %H:%M"
+      short: "%m-%d %H:%M"
+  order_mailer:
+    user_order:
+      new_order: "New Order"
+      greeting: "Hello %{name}, "
+      message: "I have placed an order #%{order_id}. Please check for me."
+  layouts:
+    header:
+      wellcome_msg: "Welcome to Foods and Drinks!"
+      call_us: "Call Us: +123.456.789"
+      my_account: "My Account"
+      history_order: "Hictory Orders"
+      profile: "My Profile"
+      sign_in: "Sign In"
+      login: "login"
+      log_out: "Log Out"
+      sign_up: "Sign Up"
+      logo: "Logo"
+      search_place_holder: "Search name of product"
+      recently_added_item: "Recently added item(s)"
+      cart: "Cart"
+      items: "%{item} Item(s)"
+      subtotal: "Subtotal: "
+      price: "$ %{price}"
+      checkout: "Checkout"
+      view_cart: "View Cart"
+      dashboard_admin: "Dashboard Admin"
+    mobilemenu:
+      home: "Home"
+      suggest: "Suggest"
+      search: "Search"
+    navbar:
+      shop_foods_and_drinks: "Shop Foods and Drinks"
+      home: "Home"
+      suggest: "Suggest"
+      search: "Search"
+      menu: "Menu"
+    footer:
+      design_by: "Design by DT"
+  static_pages:
+    no_item: "No item"
+    home:
+      home_title: "Home"
+      hot_trend: "Hot trend"
+      food_category: "Food"
+      drink_category: "Drink"
+  shared:
+    error_messages:
+      error_content: "The form contains "
+      error: "error"
+  up_user:
+    up_edit:
+      submit: "Create my account"
+      confirm: "Password confirmation"
+  sessions:
+    create:
+      danger_failed: "Invalid email/password combination"
+      account_actived: "Account not activated. "
+      check_mail: "Check your email for the activation link."
+    new:
+      login: "Login"
+      signin_account: "Welcome back! Sign in to your account"
+      remember: "Remember me"
+      submit: "Log in"
+      lost_password: "Lost your password?"
+      create_account: "Create your very own account!!!"
+  filters:
+    search_title: "Search"
+    show:
+      products: "Products"
+      shop_by: "Shop By"
+      categories: "Categories"
+      price: "Price"
+      min_price: "Min price"
+      max_price: "Max price"
+      search: "Search"
+      rating: "Rating"
+      stars: "%{star} stars"
+      all_product: "All product"
+  categories:
+    level: "&nbsp;&nbsp;&nbsp;"
+    level_suggest: "-"
+  ratings:
+    create:
+      rating_success: "Rating success"
+      rating_faild: "Rating faild"
+    update:
+      rating_success: "Rating success"
+      rating_faild: "Rating faild"
+  comments:
+    not_found_comments: "Not found comment"
+    create:
+      comment_success: "Comment success"
+      comment_faild: "Comment faild"
+    destroy:
+      delete_success: "Delete Success"
+      delete_failed: "Delete Failed"
+      confirm: "Are you sure?"
+  password_resets:
+    new:
+      submit: "Submit"
+      forget: "Forgot password"
+    create:
+      email_sent: "Email sent with password reset instructions"
+      email_found: "Email address not found"
+    edit:
+      tittle: "Reset password"
+      update: "Update password"
+      confirm: "Password confirmation"
+    update:
+      no_add : "can't be empty"
+      success: "Password has been reset."
+    check_expiration:
+      expired : "Password reset has expired."
+    load_user:
+      email_not_found : "Email address not found"
+  user_mailer:
+    account_activation:
+      h1: "Foods and Drinks"
+      hi: "Hi"
+      p: "Welcome to the Foods and Drinks Click on the link below to activate your account:"
+      activate: "Activate"
+    password_reset:
+      h1: "Password reset"
+      p1_htm: "To reset your password click the link below:"
+      link: "Reset password"
+      p2_htm: "This link will expire in two hours."
+      p3_htm: "If you did not request your password to be reset,
+        please ignore this email and your password will stay as it is."
+  account_activations:
+    edit:
+      success_account: "Account activated!"
+      advalid_link: "Invalid activation link"
+  orders:
+    not_found_order: "Not found order"
+    order:
+      total_price: "$ %{price}"
+    index:
+      history_orders: "History orders"
+      no_label: "No."
+      ordered_date_label: "Ordered date"
+      total_price_label: "Total price"
+      status_label: "Status"
+      function_label: "Function"
+      detail: "Detail"
+      delete: "Delete"
+      no_order: "No order"
+    create:
+      order_success: "Order Success"
+      order_failed: "Order Failed"
+    destroy:
+      delete_success: "Delete Success"
+      delete_failed: "Delete Failed"
+  order_details:
+    order_detail:
+      price: "$ %{price}"
+    index:
+      history_orders: "Order Details"
+      image_label: "Image"
+      product_name_label: "Product Name"
+      unit_price_label: "Unit Price"
+      quantity_label: "Quantity"
+      total_label: "Total"
+  carts:
+    shopping_title: "Shopping cart"
+    confirm: "Are you sure?"
+    shopping_cart:
+      product: "Product"
+      name: "Name"
+      price: "Price"
+      quantity: "Quantity"
+      total_label: "Total"
+      total: "$ %{price}"
+      checkout: "Checkout"
+    order_cart:
+      apply: "Apply"
+    update:
+      out_of_stock: "Out of stock"
+    create:
+      success_add: "Added success"
+      invalid_quantity: "Invalid quantity"
+    destroy:
+      success_delete: "Deleted sucess"
+    update:
+      invalid_quantity: "Invalid quantity"
+    destroy:
+      success_delete: "Deleted sucess"
+  suggests:
+    new:
+      suggest_us: "Suggests for Us"
+      write_suggest: "Write a suggest"
+      send_suggest: "Send Suggest"
+    create:
+      suggest_success: "Suggested success"
+      suggest_fail: "Suggested fail"

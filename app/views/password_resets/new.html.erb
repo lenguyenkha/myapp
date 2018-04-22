@@ -1,0 +1,17 @@
+<% provide :title, t(".forget") %>
+<section class="main-container col1-layout">
+  <div class="main container">
+    <div class="page-content">
+      <div class="account-login">
+        <div class="box-authentication">
+          <h4><%= t ".forget" %></h4>
+          <%= form_for :password_reset, url: password_resets_path do |f| %>
+            <%= f.label :email %>
+            <%= f.email_field :email, class: "form-control" %>
+            <%= f.submit t(".submit"), class: "button" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

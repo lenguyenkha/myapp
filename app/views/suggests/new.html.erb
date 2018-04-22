@@ -1,0 +1,38 @@
+<section class="main-container col1-layout">
+  <div class="main container">
+    <div class="row">
+      <section class="col-main col-sm-12">
+        <div id="contact" class="page-content page-contact">
+        <div class="page-title">
+          <h2><%= t ".suggest_us" %></h2>
+        </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6">
+              <h3 class="page-subheading"><%= t ".write_suggest" %></h3>
+              <%= form_for @suggest do |f| %>
+                <div class="contact-form-box">
+                  <%= render "shared/error_messages", object: f.object %>
+                  <div class="form-group">
+                    <%= f.label :name_product %>
+                    <%= f.text_field :product_name, class: "form-control input-sm", required: true %>
+                  </div>
+                  <div class="form-group">
+                    <%= f.label :category %>
+                    <%= f.collection_select :category_id, list_category, :id, :name, {}, class: "form-control" %>
+                  </div>
+                  <div class="form-group">
+                    <%= f.label :detail %>
+                    <%= f.text_area :detail, rows: "6", class: "form-control", required: true %>
+                  </div>
+                  <div class="form-group">
+                    <%= f.submit t(".send_suggest"), class: "buttonn"%>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>

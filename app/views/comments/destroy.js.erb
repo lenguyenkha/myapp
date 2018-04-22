@@ -1,0 +1,11 @@
+$('#list-comment').html('<%= j(render('products/comment')) %>');
+$('.pagination a').attr('data-remote', 'true');
+$('.pagination a').each(function(){
+  var reg = '/comments/\\d+';
+  var value = $(this).attr('href')
+  var result = value.match(reg)
+  if(result != null){
+    value=value.replace(result[0],'/products/<%= @product.id %>');
+    $(this).attr('href', value);
+  }
+});

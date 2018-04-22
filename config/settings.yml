@@ -1,0 +1,58 @@
+home:
+  number_of_products: 4
+categories:
+  root_id: 0
+  food_default_id: 1
+  drink_default_id: 2
+  max_length_name: 50
+products:
+  number_of_comment: 5
+  star_min: 1
+  star_max: 5
+  out_of_stock: 0
+  hot_trend_record: 4
+  min_quantity: 1
+  detail_rows: 5
+  max_size_image_file: 5
+user_models:
+  max_length_name: 50
+  max_length_email: 255
+  min_length_password: 6
+  time_expired: 2
+sessions_controller:
+  checked: "1"
+up_edit:
+  male: 1
+  female: 0
+filters:
+  number_of_products: 8
+orders:
+  number_of_orders: 5
+comments:
+  max_length_content: 255
+suggests:
+  max_length_name: 50
+  max_length_detail: 255
+  pending: 0
+  accept_status: 1
+  reject_status: 2
+admin:
+  categories:
+    number_of_categories: 10
+  products:
+    number_of_products: 10
+    picture_width: 650
+    picture_height: 650
+  users:
+    number_of_users: 10
+  orders:
+    number_of_orders: 10
+  order_details:
+    number_of_order_details: 5
+  suggests:
+    number_of_suggests: 10
+page:
+  default_page: 1
+languages:
+  vi_image: "vietnam.png"
+  en_image: "english.png"

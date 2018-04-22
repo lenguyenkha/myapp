@@ -1,0 +1,94 @@
+<% provide :title, t(".dashboard_admin_title") %>
+<div id="page-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header"><%= t "admin.layouts.dashboard" %></h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-3 col-md-6">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <div class="row">
+            <div class="col-xs-3">
+              <i class="fa fa-user fa-5x"></i>
+            </div>
+            <div class="col-xs-9 text-right">
+              <div class="huge"><%= t "admin.layouts.manage_users" %></div>
+            </div>
+          </div>
+        </div>
+        <%= link_to admin_users_path do %>
+          <div class="panel-footer">
+            <span class="pull-left"><%= t ".goto" %></span>
+            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+            <div class="clearfix"></div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+      <div class="panel panel-green">
+        <div class="panel-heading">
+          <div class="row">
+            <div class="col-xs-3">
+              <i class="fa fa-support fa-5x"></i>
+            </div>
+            <div class="col-xs-9 text-right">
+              <div class="huge"><%= t "admin.layouts.manage_categories" %></div>
+            </div>
+          </div>
+        </div>
+        <%= link_to admin_categories_path do %>
+          <div class="panel-footer">
+            <span class="pull-left"><%= t ".goto" %></span>
+            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+            <div class="clearfix"></div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+      <div class="panel panel-yellow">
+        <div class="panel-heading">
+          <div class="row">
+            <div class="col-xs-3">
+              <i class="fa fa-tasks fa-5x"></i>
+            </div>
+            <div class="col-xs-9 text-right">
+              <div class="huge"><%= t "admin.layouts.manage_products" %></div>
+            </div>
+          </div>
+        </div>
+        <%= link_to admin_products_path do %>
+          <div class="panel-footer">
+            <span class="pull-left"><%= t ".goto" %></span>
+            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+            <div class="clearfix"></div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+      <div class="panel panel-red">
+        <div class="panel-heading">
+          <div class="row">
+            <div class="col-xs-3">
+              <i class="fa fa-shopping-cart fa-5x"></i>
+            </div>
+            <div class="col-xs-9 text-right">
+              <div class="huge"><%= t "admin.layouts.manage_orders" %></div>
+            </div>
+          </div>
+        </div>
+        <%= link_to admin_orders_path do %>
+          <div class="panel-footer">
+            <span class="pull-left"><%= t ".goto" %></span>
+            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+            <div class="clearfix"></div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<%= form_for @user do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+  <%= f.label :name %>
+  <%= f.text_field :name, class: "form-control", required: true %>
+  <%= f.label :email %>
+  <%= f.email_field :email, class: "form-control", required: true %>
+  <%= f.label :password %>
+  <%= f.password_field :password, class: "form-control" %>
+  <%= f.label :password_confirmation, t(".confirm") %>
+  <%= f.password_field :password_confirmation, class: "form-control"%>
+  <%= f.label :phone %>
+  <%= f.text_field :phone, class: "form-control", required: true %>
+  <%= f.label :address %>
+  <%= f.text_field :address, class: "form-control", required: true %>
+  <%= f.label :gender %>
+  <%= f.label :male, class: "bg" %>
+  <%= f.radio_button :gender, Settings.up_edit.male, class: "gender" %>
+  <%= f.label :female, class: "bg" %>
+  <%= f.radio_button :gender, Settings.up_edit.female, class: "gender"%>
+  <%= f.submit t(".submit"), class: "button" %>
+<% end %>

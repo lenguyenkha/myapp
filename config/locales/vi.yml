@@ -1,0 +1,250 @@
+vi:
+  base_title: "Foods And Drinks"
+  close_popup: "Đóng"
+  account_activation: "Kích hoạt tài khoản"
+  password_reset: "Thiết lâọ lại mật khẩu"
+  error_sign_up: "Không tìm thấy user"
+  notice_message_success: "Hoàn thành!!!"
+  notice_message_danger: "Cảnh báo!!!"
+  will_paginate:
+    previous_label: "Lui"
+    next_label: "Tiếp"
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: "khoảng 1 tiếng trước"
+        other: "khoảng %{count} tiếng trước"
+      about_x_months:
+        one: "khoảng 1 tháng trước"
+        other: "khoảng %{count} tháng trước"
+      about_x_years:
+        one: "khoảng 1 năm trước"
+        other: "khoảng %{count} năm trước"
+      almost_x_years:
+        one: "gần 1 năm trước"
+        other: "gần %{count} năm trước"
+      half_a_minute: "half a minute"
+      less_than_x_minutes:
+        one: "khoảng 1 phút trước"
+        other: "khoảng %{count} phút trước"
+      less_than_x_seconds:
+        one: "khoảng 1 giây chưa"
+        other: "khoảng %{count} giây chưa"
+      over_x_years:
+        one: "hơn 1 năm trước"
+        other: "hơn %{count} năm trước"
+      x_days:
+        one: "1 ngày trước"
+        other: "%{count} ngày trước"
+      x_minutes:
+        one: "1 phút"
+        other: "%{count} phút trước"
+      x_months:
+        one: "1 tháng trước"
+        other: "%{count} tháng trước"
+      x_years:
+        one: "1 năm trước"
+        other: "%{count} năm trước"
+      x_seconds:
+        one: "1 giây trước"
+        other: "%{count} giây trước"
+  date:
+    formats:
+      default: "%d-%m-%Y %H:%M:%S"
+  time:
+    formats:
+      default: "%d-%m-%Y %H:%M:%S"
+      long: "%d-%m-%Y %H:%M"
+      short: "%d-%m %H:%M"
+  order_mailer:
+    user_order:
+      new_order: "Đơn hang mới"
+      greeting: "Xin chào %{name}, "
+      message: "Tôi có đặt đơn hàng số #%{order_id}. Làm ơn kiểm tra cho tối."
+  layouts:
+    header:
+      wellcome_msg: "Chào mừng đến Foods and Drinks!"
+      call_us: "Gọi: +123.456.789"
+      my_account: "Tài khoản của tôi"
+      history_order: "Lịch sử đơn hàng"
+      profile: "Hồ sơ cá nhân"
+      sign_in: "Đăng nhập"
+      login: "đăng nhập"
+      log_out: "Đăng xuất"
+      sign_up: "Đăng ký"
+      logo: "Logo"
+      search_place_holder: "TÌm kiếm sản phẩm theo tên"
+      recently_added_item: "Sản phẩm thêm gần nhất"
+      cart: "Giỏ hàng"
+      items: "(%{item})"
+      subtotal: "Tổng: "
+      price: "$ %{price}"
+      checkout: "Đặt hàng"
+      view_cart: "Xem giỏ hàng"
+      dashboard_admin: "Bảng điều khiển"
+    mobilemenu:
+      home: "Trang chủ"
+      suggest: "Yêu cầu"
+      search: "Tìm kiếm"
+    navbar:
+      shop_foods_and_drinks: "Cửa hàng Foods and Drinks"
+      home: "Trang chủ"
+      suggest: "Yêu cầu"
+      search: "Tìm kiếm"
+      menu: "Menu"
+    footer:
+      design_by: "Thiết kế bởi CD"
+  static_pages:
+    no_item: "Không có sản phẩm"
+    home:
+      home_title: "Trang chủ"
+      hot_trend: "Xu hướng"
+      food_category: "Đồ ăn"
+      drink_category: "Đồ uống"
+  shared:
+    error_messages:
+      error_content: "Có "
+      error: "lỗi"
+  up_user:
+    up_edit:
+      submit: "Tạo tài khoản"
+      confirm: "Xác nhận mật khẩu"
+  sessions:
+    create:
+      danger_failed: "Tài khoản hoặc mật khẩu không đúng"
+      account_actived: "Tài khoản chưa kích hoạt. "
+      check_mail: "Kiểm tra email để kích hoạt."
+    new:
+      login: "Đăng nhập"
+      signin_account: "Chào mừng trở lại!"
+      remember: "Nhớ tài khoản"
+      submit: "Đăng nhập"
+      lost_password: "Quên mật khẩu?"
+      create_account: "Tạo tài khoản của bạn!!!"
+  filters:
+    search_title: "Tìm kiếm"
+    show:
+      products: "Sản phẩm"
+      shop_by: "Cửa hàng theo"
+      categories: "Danh mục"
+      price: "Giá"
+      min_price: "Giá nhỏ nhất"
+      max_price: "Giá cao nhất"
+      search: "Tìm kiếm"
+      rating: "Đánh giá"
+      stars: "%{star} sao"
+      all_product: "Tất cả sản phẩm"
+  categories:
+    level: "&nbsp;&nbsp;&nbsp;"
+    level_suggest: "-"
+  ratings:
+    create:
+      rating_success: "Đánh giá thành công"
+      rating_faild: "Đã có lỗi xảy ra, đánh giá không thành công"
+    update:
+      rating_success: "Đánh giá thành công"
+      rating_faild: "Đã có lỗi xảy ra, đánh giá không thành công"
+  comments:
+    create:
+      comment_success: "BÌnh luận thành công"
+      comment_faild: "Đã có lỗi xảy ra, bình luận không thành công"
+    destroy:
+      confirm: "Bạn có muốn xóa bình luận này?"
+  password_resets:
+    new:
+      submit: "Gửi"
+      forget: "Quên mật khẩu"
+    create:
+      email_sent: "Email khôi phục mật khẩu đã được gửi"
+      email_found: "Không tìm thấy địa chỉ email"
+    edit:
+      tittle: "Khôi khục mật khẩu"
+      update: "Cập nhập mật khẩu"
+      confirm: "Xác nhận mật khẩu"
+    update:
+      no_add : "không được trống"
+      success: "Mật khẩu đã được khôi phục."
+    check_expiration:
+      expired : "Khôi phục mật khẩu đã hết hạn."
+    load_user:
+      email_not_found : "Không tìm thấy địa chỉ email"
+  user_mailer:
+    account_activation:
+      h1: "Foods and Drinks"
+      hi: "Chào"
+      p: "Chaò mừng đến the Foods and Drinks. Bấm vào đường link ở dưới đến xác nhận tài khoản của bạn:"
+      activate: "Xác nhận"
+    password_reset:
+      h1: "Khôi phục mật khẩu"
+      p1_htm: "Để khôi phục mật khẩu của bạn vui lòng bấm link bên dưới:"
+      link: "Khôi phục mật khẩu"
+      p2_htm: "Đường dẫn này sẽ hết hạn trong vòng 2 giờ."
+      p3_htm: "Nếu bạn không yêu cầu đặt lại mật khẩu,
+        xin vui lòng bỏ qua email này và mật khẩu của bạn sẽ vẫn như trước."
+  account_activations:
+    edit:
+      success_account: "Tài khoản đã kích hoạt!"
+      advalid_link: "Đường dẫn kích hoạt không hợp lệ"
+  orders:
+    not_found_order: "Không tìm thấy đơn hàng"
+    order:
+      total_price: "$ %{price}"
+    index:
+      history_orders: "Lịch sử đơn hàng"
+      no_label: "No."
+      ordered_date_label: "Ngày đặt"
+      total_price_label: "Tổng cộng"
+      status_label: "Trạng thái"
+      function_label: "Chức năng"
+      detail: "Chi tiết"
+      delete: "Hủy"
+      no_order: "Không có đơn hàng"
+    create:
+      order_success: "Đặt hang thành công"
+      order_failed: "Đẫ có lỗi xảy ra, đặt hàng không thành công"
+    destroy:
+      delete_success: "Xóa thành công"
+      delete_failed: "Đã có lỗi xảy ra, xóa không thành công"
+  order_details:
+    order_detail:
+      price: "$ %{price}"
+    index:
+      history_orders: "Chi tiết đơn hàng"
+      image_label: "Hình ảnh"
+      product_name_label: "Tên sản phẩm"
+      unit_price_label: "Đơn giá"
+      quantity_label: "Số lượng"
+      total_label: "Tổng cộng"
+  carts:
+    shopping_title: "Giỏ hàng"
+    confirm: "Bạn có chắc?"
+    shopping_cart:
+      product: "Sản phẩm"
+      name: "Tên"
+      price: "Giá"
+      quantity: "Số lượng"
+      total_label: "Tổng cộng"
+      total: "$ %{price}"
+      checkout: "Đặt hàng"
+      no_item: "Không có sản phẩm"
+    order_cart:
+      apply: "Áp dụng"
+    update:
+      out_of_stock: "Hết hàng"
+    create:
+      success_add: "Thêm thành công"
+      invalid_quantity: "Số lượng không hợp lệ"
+    destroy:
+      success_delete: "Xóa thành công"
+    update:
+      invalid_quantity: "Số lượng không hợp lệ"
+    destroy:
+      success_delete: "Xóa thành công"
+  suggests:
+    new:
+      suggest_us: "Yêu cầu cho chúng tôi"
+      write_suggest: "Viết yêu cầu"
+      send_suggest: "Gửi"
+    create:
+      suggest_success: "Yêu cầu thành công"
+      suggest_fail: "Đã có lỗi xảy ra, yêu cầu không thành công"

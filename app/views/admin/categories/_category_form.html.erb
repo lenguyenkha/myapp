@@ -1,0 +1,13 @@
+<%= form_for [:admin, @category] do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control", placeholder: t(".name_place_holder") %>
+  </div>
+  <div class="form-group">
+    <%= f.label :parent_id, t(".parent") %>
+    <%= f.collection_select :parent_id, list_category_include_new_root, :id, :name, {},
+      class: "form-control" %>
+  </div>
+  <%= f.submit t(".button_submit"),class: "btn btn-primary" %>
+<% end %>

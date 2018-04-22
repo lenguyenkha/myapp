@@ -1,0 +1,19 @@
+<table class="col-md-12">
+<thead>
+  <tr>
+    <th class="th-product"><%= t "order_details.index.image_label" %></th>
+    <th class="th-details"><%= t "order_details.index.product_name_label" %></th>
+    <th class="th-price"><%= t "order_details.index.unit_price_label" %></th>
+    <th class="th-quantity"><%= t "order_details.index.quantity_label" %></th>
+    <th class="th-price"><%= t "order_details.index.total_label" %></th>
+  </tr>
+</thead>
+<tbody>
+  <% if @order_details.any? %>
+    <%= render @order_details %>
+  <% else %>
+    <tr><td colspan="4"><h5><%= t "order_details.index.no_order" %></h5></td></tr>
+  <% end %>
+</tbody>
+</table>
+<%= will_paginate @order_details, class: "pagination-area", previous_label: "<", next_label: ">" %>

@@ -1,0 +1,22 @@
+<% provide :title, t(".signup") %>
+<section class="main-container col1-layout">
+  <div class="main container">
+    <div class="page-content">
+      <div class="account-login">
+        <div class="box-authentication">
+          <h4><%= t ".signup" %></h4>
+          <p class="before-login-text"><%= t ".create_account" %></p>
+          <%= render "up_edit" %>
+          <div class="register-benefits">
+            <h5><%= t ".signup_able" %></h5>
+            <ul>
+              <li><%= t ".li_speed" %></li>
+              <li><%= t ".li_track" %></li>
+              <li><%= t ".li_keep" %></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

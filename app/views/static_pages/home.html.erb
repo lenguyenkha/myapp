@@ -1,0 +1,82 @@
+<% provide :title, t(".home_title") %>
+<div class="banner-static">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-sms-12">
+        <%= link_to "#food-content" do %>
+          <div class="banner-box banner-box1">
+            <%= image_tag "banner_food.jpg" %>
+            <div class="box-hover">
+              <div class="banner-title"><%= t ".food_category" %></div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <div class="col-sm-6 col-sms-12">
+        <%= link_to "#drink-content" do %>
+          <div class="banner-box banner-box1">
+            <%= image_tag "banner_drink.jpg" %>
+            <div class="box-hover">
+              <div class="banner-title"><%= t ".drink_category" %></div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+  </div>
+</div>
+<% if @hot_trend.any? %>
+<div class="main-container col1-layout">
+  <div class="container">
+    <div class="row">
+      <div class="col-main col-sm-12 col-xs-12">
+        <div class="shop-inner">
+          <div class="page-title">
+            <h2><%= t ".hot_trend" %></h2>
+          </div>
+          <div class="product-grid-area">
+            <ul class="products-grid" id="hot-trend">
+              <%= render "hot_trend" %>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
+<div class="main-container col1-layout" id="food-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-main col-sm-12 col-xs-12">
+        <div class="shop-inner">
+          <div class="page-title">
+            <h2><%= t ".food_category" %></h2>
+          </div>
+          <div class="product-grid-area">
+            <ul class="products-grid" id="list-food">
+              <%= render "list_food" %>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="main-container col2-right-layout" id="drink-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-main col-sm-12 col-xs-12">
+        <div class="shop-inner">
+          <div class="page-title">
+            <h2><%= t ".drink_category" %></h2>
+          </div>
+          <div class="product-grid-area">
+            <ul class="products-grid" id="list-drink">
+              <%= render "list_drink" %>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

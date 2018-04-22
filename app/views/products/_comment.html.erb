@@ -1,0 +1,20 @@
+<div class="reviews-content-left">
+  <div class="single-box">
+    <h2 class=""><%= t ".comment_list_title" %></h2>
+    <div class="comment-list">
+      <ul>
+        <% if @comments.any? %>
+          <%= render @comments %>
+        <% else %>
+          <li>
+            <div class="comment-body">
+              <div class="comment"><%= t ".no_comment" %></div>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  <%= will_paginate @comments, class: "pagination-area",
+    previous_label: "<", next_label: ",>", controller: :products, action: :show if @comments %>
+</div>

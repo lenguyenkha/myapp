@@ -1,0 +1,189 @@
+en:
+  admin:
+    layouts:
+      dashboard: "Dashboard"
+      manage_users: "Manage Users"
+      manage_categories: "Manage Categories"
+      manage_products: "Manage Products"
+      manage_orders: "Manage Orders"
+      manage_suggests: "Manage Suggests"
+      manage_order_details: "Manage Order details"
+      navbar:
+        admin_header: "Admin Page"
+        toggle_navigation: "Toggle navigation"
+        back_to_public_page: "Back to public page"
+        logout: "Logout"
+        import_products: "Import Products"
+        statistic_orders: "Statistic orders"
+        setting: "Setting"
+    static_pages:
+      index:
+        dashboard_admin_title: "Dashboard Admin"
+        goto: "Go to"
+        manage_users: "Manage Users"
+        manage_products: "Manage Products"
+        manage_orders: "Manage Orders"
+    categories:
+      root_category: "New root category"
+      not_valid_parent: "Not valid parent"
+      not_found_category: "Not found category"
+      can_not_delete: "Can not delete root category"
+      index:
+        id: "id"
+        name: "Name"
+        parent_id: "Parent Id"
+        created_at: "Created At"
+        updated_at: "Updated At"
+        function: "Function"
+        manage_categories_title: "Manage Categories"
+        list_category: "List category"
+        add_new: "Add new"
+      destroy:
+        delete_success: "Delete success"
+        delete_failed: "Delete failed"
+        confirm: "Are you sure?"
+      edit:
+        update_category_title: "Update Category"
+      update:
+        update_success: "Update success"
+        update_failed: "Update failed"
+      new:
+        new_category_title: "New Category"
+      create:
+        add_success: "Add success"
+        add_failed: "Add failed"
+      category_form:
+        name_place_holder: "Input category name"
+        parent: "Parent"
+        button_submit: "Save"
+    products:
+      image_oversize: "should be less than 5MB"
+      not_found_product: "Not found product"
+      index:
+        id: "id"
+        picture: "Picture"
+        name: "Name"
+        quantity: "Quantity"
+        price: "Price"
+        category_name: "Category Name"
+        created_at: "Created At"
+        updated_at: "Updated At"
+        function: "Function"
+        manage_products_title: "Manage Products"
+        list_product: "List product"
+        add_new: "Add new"
+      edit:
+        update_product_title: "Update Products"
+      update:
+        update_success: "Update success"
+        update_failed: "Update failed"
+      destroy:
+        delete_success: "Delete success"
+        delete_failed: "Delete failed"
+        confirm: "Are you sure?"
+      new:
+        new_product_title: "New Product"
+      create:
+        add_success: "Add success"
+        add_failed: "Add failed"
+      product_form:
+        name_place_holder: "Input product name"
+        detail_place_holder: "Input product detail"
+        price_place_holder: "Input product price"
+        quantity_place_holder: "Input product quantity"
+        category: "Category"
+        button_submit: "Save"
+    users:
+      not_found_user: "Not found user"
+      index:
+        manage_users_title: "Manage users"
+        list_user: "List user"
+        id: "id"
+        name: "Name"
+        gender: "Gender"
+        address: "Address"
+        phone: "Phone"
+        email: "Email"
+        actived: "Activated"
+        name_email: "name,email"
+      destroy:
+        admin: "Can't delete admin"
+        delete_success: "Delete success"
+        delete_failed: "Delete failed"
+        confirm: "Are you sure?"
+      update:
+        update_success: "Update success"
+        update_failed: "Update failed"
+      gender:
+        male: "Male"
+        female: "Female"
+        none: "None"
+    orders:
+      statistic: "Statistic orders"
+      load_data: "Load data"
+      not_found_order: "Not found order"
+      order:
+        detail: "Detail"
+        accept: "Accept"
+        reject: "Reject"
+      index:
+        manage_orders_title: "Manager Orders"
+        list_order: "List order"
+        rank: "Rank"
+        user_email: "User email"
+        user_name: "User name"
+        total: "Total"
+        status: "Status"
+        created_at: "Created At"
+        updated_at: "Updated At"
+        function: "Function"
+      update:
+        check_status: "This order already %{status}"
+        update_success: "Update Success"
+        update_failed: "Update Failed"
+    order_details:
+      index:
+        manage_order_details_title: "Manager Order detail"
+        list_order_detail: "List order detail"
+        no_order: "No."
+        picture: "Picture"
+        name: "Product Name"
+        unit_price: "Unit price"
+        quantity: "Quantity"
+        total: "Total"
+    order_mailer:
+      admin_respon:
+        greeting: "Hello %{name}, "
+        message: "The order No.%{order_id} has been %{status}. Thank you!"
+        accept: "Accept"
+        reject: "Reject"
+        pending: "Pending"
+    suggests:
+      not_valid_parent: "Not valid parent"
+      not_found_category: "Not found suggest"
+      can_not_delete: "Can not delete root suggest"
+      index:
+        id: "id"
+        email: "Email"
+        category: "Category"
+        detail: "Detail"
+        status: "Status"
+        function: "Function"
+        manage_suggests_title: "Manage suggests"
+        list_suggest: "List suggest"
+        add_new: "Add new"
+      destroy:
+        delete_success: "Delete success"
+        delete_failed: "Delete failed"
+        confirm: "Are you sure?"
+      update:
+        success: "Change success"
+        failed: "Change fail"
+    import_products:
+      new:
+        import_product_title: "Import Products"
+      create:
+        import_failed: "Import failed"
+      product_import_form:
+        button_submit: "Submit"
+        file: "File"

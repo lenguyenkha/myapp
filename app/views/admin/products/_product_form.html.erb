@@ -1,0 +1,29 @@
+<%= form_for [:admin, @product] do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control", placeholder: t(".name_place_holder") %>
+  </div>
+  <div class="form-group">
+    <%= f.label :detail %>
+    <%= f.text_area :detail, class: "form-control", placeholder: t(".detail_place_holder"),
+      rows: Settings.products.detail_rows %>
+  </div>
+  <div class="form-group">
+    <%= f.label :price %>
+    <%= f.number_field :price, step: :any, class: "form-control", placeholder: t(".price_place_holder") %>
+  </div>
+  <div class="form-group">
+    <%= f.label :quantity %>
+    <%= f.number_field :quantity, class: "form-control", placeholder: t(".quantity_place_holder") %>
+  </div>
+  <div class="form-group">
+    <%= f.label :picture %>
+    <%= f.file_field :picture, accept: "image/jpeg,image/gif,image/png", class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :category_id, t(".category") %>
+    <%= f.collection_select :category_id, list_category, :id, :name, {}, class: "form-control" %>
+  </div>
+  <%= f.submit t(".button_submit"), class: "btn btn-primary" %>
+<% end %>

@@ -1,0 +1,30 @@
+vi:
+  users:
+    anonymous: "Vô danh"
+    please_log_in: "Hãy đăng nhập."
+    create:
+      success_signup: "Chào mừng đến với Foods and Drinks!"
+      failed_signup: "Đăng ký không thành công"
+      check_ymail: "Hãy kiểm tra email để xác thực tài khoản."
+    show:
+      your_profile: "Hồ sơ cá nhân"
+      update: "(Cập nhật hồ sơ)"
+      male: "Nam"
+      female: "Nữ"
+      gmale: "Không biết"
+    new:
+      signup: "Đăng ký"
+      create_account: "Tạo tài khoản của bạn"
+      signup_able: "Đăng ký ngay hôm nay và bạn có thể:"
+      li_speed: "Thanh toán nhanh chóng"
+      li_track: "Theo dõi đơn hàng dễ dàng"
+      li_keep: "Lưu trữ các đơn hàng của bạn"
+    up_edit:
+      submit: "Cập nhật"
+      confirm: "Xác nhận mật khẩu"
+    edit:
+      update: "Cập nhật hồ sơ cá nhân"
+      edit_user: "Cập nhật người dùng"
+      please_login: "Hãy đăng nhập."
+    update:
+      profile_updated: "Hồ sơ đã được cập nhật"
